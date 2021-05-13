@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport content="width=device-width,initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<style>
+img{
+            margin:auto;
+            height: 70px;
+            width: 70px;
+            border-radius: 200px;
+
+        }
+        
+
+        #navbar{
+            display:flex;
+            position: sticky;
+            align-items: center;
+            top:0px;
+            
+            }
+         #navbar::before{
+             content:"";
+             background-color: black;
+             position:absolute;
+             height:100%;
+             width:101%;
+             z-index:-1;
+             top:-8px;
+             left:-5px;
+             opacity:0.9;
+             
+         }
+
+        #logo {
+            
+            margin: 12px 20px;
+
+        }
+
+        #logo img {
+            margin: -18px -6px;
+        }
+        #navbar ul{
+            display:flex;
+            font-family: 'Baloo Bhai 2', cursive;
+            color:white;
+            
+        }
+        #navbar ul li{
+            
+            list-style: none;
+            font-size: 1.9rem;
+            
+            cursor:pointer
+            
+        }
+        #navbar ul li a{
+            color:white;
+            display:block;
+            padding:3px 22px;
+            border-radius:20px;
+            text-decoration: none;
+            
+        }
+        #navbar ul li a:hover{
+            
+            color:white;
+            background-color:blue;
+            
+        }
+        #home{
+            display:flex;
+            flex-direction: column;
+            font-size: 1.1rem;
+            padding:3px 200px;
+            height:414px;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Baloo Bhai 2', cursive;
+
+        }
+        #home::before{
+            content:"";
+             position:absolute;
+             background color: white;
+             background-size: 100%;
+             height:289%;
+             width:100%;
+             z-index: -1; 
+             opacity:0.8;
+             
+            }
+            
+            .h-primary{
+                font-size: 3.2rem;
+                padding: 20px 10px;
+                font-family: 'Baloo Bhai 2', cursive;
+            }
+            .h-secondary{
+                font-size: 2rem;
+                padding: 20px 10px;
+                font-family: 'Baloo Bhai 2', cursive;
+            }
+            .btn{
+                font-family: 'Baloo Bhai 2', cursive;
+                padding:6px 20px;
+                background-color: blueviolet;
+                border:2px solid blue;
+                border-radius: 10px;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+            .btn:hover{
+                background: black;
+                color:white;
+            }
+            #img1{
+                height:50px;
+                width:50px;
+            }
+            .center{
+                text-align: center;
+            }
+            #services{
+                margin:34px;
+                display:flex;
+                
+            }
+            #services .box{
+                border:2px solid red;
+                padding:24px 6px;
+                margin:3px 6px;
+                border-radius: 23px;
+                background-color:#eaabab;
+
+            }
+            #services .box img{
+                display:block;
+                margin:auto;
+                height:128px;
+                width:138px;
+                 border-radius: 68px;
+                 
+
+            }
+            #sevices .box p{
+                font-family: 'Baloo Bhai 2', cursive;
+
+            }
+            #client-section{
+                height:344px;
+                
+
+            }
+            #client-section::before{
+                content:"";
+                position:absolute;
+                background: url('chow.jpg') no-repeat center center/cover;
+                width:100%;
+                height: 57%;
+                z-index:-1;
+                
+                left:0px;
+                
+                
+            }
+            #clients{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #clients img{
+                height:150px;
+                width:150px;
+                border-radius:0px;
+            }
+            .client-item{
+                padding:13px;
+            }
+            #contact{
+                position:relative;
+
+            }
+            #contact::before{
+                content:"";
+                position:absolute;
+                background: url('raw.jpg')no-repeat center center/cover;
+                width:100%;
+                height:100%;
+                z-index:-1;
+                opacity:0.6;
+                left:0px;
+                
+                margin:-6px;
+                
+            }
+            footer{
+                background:black;
+                color:white;
+                padding:9px 20px;
+                left:0px;
+                margin:-13px;
+                width:99%;
+            }
+            #contact-box{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 34px;
+            }
+            #contact-box form{
+                width:40%;
+
+            }
+            #contact-box label{
+                font-size: 1.5rem;
+            }
+            #contact-box input,
+            #contact-box textarea{
+                width:100%;
+                padding:0.5rem;
+                border-radius: 20px;
+                font-size:1.2rem;
+
+            }
+            .sub{
+                display: block;
+               margin: auto;
+               padding: 2px 35px;
+               width: 200px;
+            }
+            .sub:hover{
+                background-color:black;
+                color:white;
+                border:2px solid blue;
+            }
+          /* .container{
+               border: 2px solid rgb(135, 78, 189);
+               width: 900px;
+               display: block;
+               margin: auto;
+               border-radius: 10px;
+           }*/
+
+</style>
+
+<body bgcolor="white">
+    <nav id="navbar">
+        <div id="logo">
+            <img src= "/static/images/ML Health.jpg"  alt="">
+        </div>
+        <ul>
+            <li class="item"><a href="{{ url_for('index') }}">Home</a></li>
+            <li class="item"><a href="{{ url_for('Diabetes') }}">Diabetes</a></li>
+            <li class="item"><a href="{{ url_for('Heart') }}">Heart</a></li>
+            <li class="item"><a href="{{ url_for('Malaria') }}">Malaria</a></li>
+            <li class="item"><a href="{{ url_for('Cancer') }}">Cancer</a></li>
+
+        </ul>
+    </nav>
+    <center>
+    <div style="color:black">
+        <form action="{{url_for('predict4')}}" method="post">
+           <b><u><h1>Breast Cancer PREDICTION USING MACHINE-LEARNING</h1></u></b>
+            <h3>Feature 1:</h3><input id="first" name="Feature 1" required="required" placeholder="Field 1"> <br></br>
+            <h3>Feature 2: </h3><input id="second" name="Feature 2" required="required" placeholder="Field 2"> <br></br>
+            <h3>Feature 3: </h3><input id="third" name="Feature 3" required="required" placeholder="Field 3"> <br></br>
+            <h3>Feature 4: </h3> <input id="fourth" name="Feature 4" required="required" placeholder="Field 4"> <br></br>
+            <h3>Feature 5 : </h3> <input id="fifth" name="Feature 5" required="required" placeholder="Filed 5"> <br></br>
+            <h3>Feature 6: </h3> <input id="sixth" name="Feature 6" required="required" placeholder="Field 6"> <br></br>
+            <h3>Feature 7: </h3> <input id="seventh" name="Feature 7" required="required" placeholder="Filed 7"> <br></br>
+            <h3>Feature 8 : </h3> <input id="eigth" name="Feature 8" required="required" placeholder="Field 8"> <br></br>
+            <h3>Feature 9: </h3> <input id="ninth" name="Feature 9" required="required" placeholder="Field 9"> <br></br>
+            <h3>Feature 10: </h3> <input id="tenth" name="Feature 10" required="required" placeholder="Field 10"> <br></br>
+            <input type="submit" value='Predict'>
+        </form>
+
+       
+    
+    </div>
+    </center>
+    <footer>
+        <div class="center">
+        Copyright &copy;Disease Prediction Using Machine Learning
+    </div>
+</footer>
+</body>
+</html>

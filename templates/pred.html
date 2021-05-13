@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> PREDICTION: </title>
+</head>
+
+<body>
+
+    <center>
+        <h1> MALARIA DETECTION USING DEEP LEARNING </h1>
+        <div style="width: 90%; margin: auto; text-align: center">
+            <img src="{{ url_for('send_file', filename=image_file_name)}}" style ="max-width: 1500px; max-height: 1500px; margin-top: 30px; margin-bottom: 10px">
+            <p style="font-style: italic">{{ image_file_name }}</p>
+        <h3> Prediction is : {{data}} </h3>
+        <br><br>
+        <a href='/'> Go Back To Home Page </a>
+    </center>
+
+</body>
+</html>
