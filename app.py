@@ -127,7 +127,7 @@ def predict2():
         Oldpeak = int(request.form['Oldpeak'])
         Slope = int(request.form['Slope'])
         Thal = int(request.form['Thal'])
-        prediction = model.predict([[Age,Sex,CP,Trestbps,Chol,Restecg,Thalach,Exang,Oldpeak,Slope,Thal]])
+        prediction = model2.predict([[Age,Sex,CP,Trestbps,Chol,Restecg,Thalach,Exang,Oldpeak,Slope,Thal]])
         disease = 'Heart Disease'
         return render_template('after.html',data=prediction,disease = disease)
 
